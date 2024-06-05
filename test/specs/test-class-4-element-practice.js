@@ -101,7 +101,7 @@ describe("Lets get used to", () => {
 
 
 
-        await browser.pause(10000);
+        await browser.pause(100);
 
 
 

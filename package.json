@@ -9,7 +9,9 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
-    "me": "node test.js"
+    "me": "node test.js",
+    "test:login":"wdio wdio.conf.js --suite login"
+    
   }
 }
 

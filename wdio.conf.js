@@ -6,7 +6,7 @@ export const config = {
         //  './test/specs/**/test-locators.js'
         // './test/specs/**/test-class-practise.js'
         //  './test/specs/**/test-element-practice.js'
-        './test/specs/**/test-class-4-element-practice.js'
+        //'./test/specs/**/test-class-4-element-practice.js'
         // './test/specs/**/test-login-playauto.js',
         // './test/specs/DragAndDrop/test-drag-and-drop.js',
         // './test/specs/Frames/test.iframe.js'
@@ -14,7 +14,19 @@ export const config = {
         // './test/specs/**/letcodeLoginPage_test.js'
 
     ],
-    
+    suites: {
+        login: [
+           
+            './test/specs/Login/test-login.js'
+
+        ],
+        otherFeature: [
+            // ...
+        ]
+    },
+
+
+
 
     exclude: [
         // 'path/to/excluded/files'
