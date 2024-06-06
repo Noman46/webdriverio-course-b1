@@ -2,39 +2,36 @@ import { Key } from 'webdriverio'
 describe("Lets get used to", () => {
 
 
-     // Spriha problem soved ===========================================
-    // it("Window Practise", async () => {
+     //Spriha problem soved ===========================================
+    it("Window Practise", async () => {
 
 
-    //    
+       
 
-    //     await browser.url('https://www.selenium.dev/selenium/web/alerts.html#')
-    //     await browser.pause(1000);
-    //     // const linkForTheNewTab = await $('#open-window-with-onload-alert')
-    //     // await linkForTheNewTab.scrollIntoView()
-    //     // await linkForTheNewTab.click()
-    //     // await browser.pause(2000);
+        await browser.url('https://www.selenium.dev/selenium/web/alerts.html#')
+        await browser.pause(4000);
 
-    //     const totalTabs = "67C952B04ED60282692753965937E0"
-    //     console.log("Total tabs", totalTabs.length)
-    //     console.log("tabs ================= ", totalTabs)
+        // // const totalTabs = "67C952B04ED60282692753965937E0"
+        // const totalTabs = await browser.getWindowHandles() ["67C952B04ED60282692753965937E0","ddC952B04ED60282692753965937E0"]
+        // // console.log("Total tabs", totalTabs[0].lent)
+        // console.log("tabs ================= ", typeof(totalTabs))
 
-    //     // await browser.switchToWindow(totalTabs[1])
-    //     // await browser.pause(3000);
-    //     // const currentTabUrl = await browser.getUrl()
-    //     // console.log("Current Url == ",currentTabUrl)
-    //     // await browser.closeWindow()
-    //     // await browser.pause(2000);
-    //     // await browser.switchToWindow(totalTabs[0])
-    //     // const currentTabUrlMother = await browser.getUrl()
-    //     // console.log("Current mother Url == ",currentTabUrlMother)
-    //     // await browser.pause(3000);
+        // await browser.switchToWindow(totalTabs[1])
+        // await browser.pause(3000);
+        // const currentTabUrl = await browser.getUrl()
+        // console.log("Current Url == ",currentTabUrl)
+        // await browser.closeWindow()
+        // await browser.pause(2000);
+        // await browser.switchToWindow(totalTabs[0])
+        // const currentTabUrlMother = await browser.getUrl()
+        // console.log("Current mother Url == ",currentTabUrlMother)
+        // await browser.pause(3000);
 
 
-    //     // get the new tab url
-    //     // close the new tab
-    //     // get back to the mother tab / window.   
-    // })
+        // get the new tab url
+        // close the new tab
+        // get back to the mother tab / window.   
+    })
 
     // it("Alert practoise", async () =>{
     //     // alert == warning / guide message/ error
@@ -90,12 +87,13 @@ describe("Lets get used to", () => {
         .down(Key.Ctrl)
         .perform()
         await linkForTheNewTab.click();
-        // await browser.action('pointer')
-        // .move({ duration: 0, linkForTheNewTab, x: 380, y: 315 })
-        // .down({ button: 0 }) // left button
-        // .pause(10)
-        // .up({ button: 0 })
-        // .perform()
+        
+        await browser.action('')
+        .move({ duration: 0, linkForTheNewTab, x: 380, y: 315 })
+        .down({ button: 0 }) // left button
+        .pause(10)
+        .up({ button: 0 })
+        .perform()
        
 
 
