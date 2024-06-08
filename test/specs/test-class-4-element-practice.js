@@ -2,11 +2,11 @@ import { Key } from 'webdriverio'
 describe("Lets get used to", () => {
 
 
-     //Spriha problem soved ===========================================
+    //Spriha problem soved ===========================================
     it("Window Practise", async () => {
 
 
-       
+
 
         await browser.url('https://www.selenium.dev/selenium/web/alerts.html#')
         await browser.pause(4000);
@@ -84,17 +84,17 @@ describe("Lets get used to", () => {
         await browser.pause(1000);
 
         await browser.action('key')
-        .down(Key.Ctrl)
-        .perform()
+            .down(Key.Ctrl)
+            .perform()
         await linkForTheNewTab.click();
-        
+
         await browser.action('')
-        .move({ duration: 0, linkForTheNewTab, x: 380, y: 315 })
-        .down({ button: 0 }) // left button
-        .pause(10)
-        .up({ button: 0 })
-        .perform()
-       
+            .move({ duration: 0, linkForTheNewTab, x: 380, y: 315 })
+            .down({ button: 0 }) // left button
+            .pause(10)
+            .up({ button: 0 })
+            .perform()
+
 
 
 

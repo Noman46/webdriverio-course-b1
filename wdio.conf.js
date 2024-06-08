@@ -12,7 +12,7 @@ export const config = {
         // './test/specs/Frames/test.iframe.js'
         // './test/specs/DropDown/test-drop-down.js'
         // './test/specs/**/letcodeLoginPage_test.js'
-        //'./test/specs/**/test.assertion.js'
+        './test/specs/**/test.assertion.js'
 
     ],
 
@@ -62,7 +62,7 @@ export const config = {
         //     acceptInsecureCerts: true
         // }
     ],
-    waitforTimeout: 5000,
+    waitforTimeout: 12000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     services: [],
