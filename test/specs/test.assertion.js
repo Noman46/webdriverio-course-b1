@@ -108,11 +108,19 @@ describe('Practising All the Necessary Defult WDIO assertion', () => {
 
     //     await expect(firstHeaderElement).toHaveText('In',{atEnd:true})
     // })
-    it("Practicing Number Option for Element Matcher Assertion", async () => {
-        await browser.url('https://letcode.in/test')
+    it.skip("Practicing Number Option for Element Matcher Assertion", async () => {
+        // await browser.url('https://letcode.in/test')
         //await browser.pause(5000)
-        const firstHeaderElement = await $$('//header/p')
-        await expect(firstHeaderElement).toBeElementsArrayOfSize({lte: 10})
+        // const firstHeaderElement = await $$('//header/p')   
+        // await expect(firstHeaderElement).toBeElementsArrayOfSize({lte: 10})
+        console.log("================== First one")
+    })
+    it("Practicing Number Option for Element Matcher Assertion", async () => {
+        // await browser.url('https://letcode.in/test')
+        // //await browser.pause(5000)
+        // const firstHeaderElement = await $$('//header/p')   
+        // await expect(firstHeaderElement).toBeElementsArrayOfSize({lte: 10})
+        console.log("================== 2nd one one")
     })
 
 
