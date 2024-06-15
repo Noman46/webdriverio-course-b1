@@ -1,3 +1,7 @@
+const env = process.env.npm_config_testSite  || 'default';
+
+
+
 export const config = {
 
     runner: 'local',
@@ -12,11 +16,10 @@ export const config = {
         // './test/specs/Frames/test.iframe.js'
         // './test/specs/DropDown/test-drop-down.js'
         // './test/specs/**/letcodeLoginPage_test.js'
-        './test/specs/**/test.assertion.js'
+        //'./test/specs/**/test.assertion.js',
+         './test/specs/**/test.testdata.js'
 
     ],
-
-
 
     suites: {
         login: [
@@ -34,20 +37,17 @@ export const config = {
         ]
     },
 
-
-
-
-
-
     exclude: [
-        // 'path/to/excluded/files'
+
     ],
 
     before: function (capabilities, specs) {
+        console.log(process.env.PATH);
+        console.log("===================", env)
         browser.maximizeWindow();
     },
 
-    // maxInstances: 2,
+
     logLevel: 'error',
     bail: 0,
     capabilities: [

@@ -1,19 +1,26 @@
 import Utility from '../utility.js'
-
+import fs from 'fs';
+import path from 'path';
 describe('Practising All the Necessary Defult WDIO assertion', () => {
 
-    // it("Should login and verify login successfull", async () => {
-    //     await browser.url('https://play1.automationcamp.ir/login.html')
-    //     await browser.pause(2000)
-    //     const userName = await $('#user')
-    //     await userName.setValue("admin")
-    //     const password = await $('#password')
-    //     await password.setValue("admin")
-    //     const loginButton = await $('#login')
-    //     await loginButton.click()
-    //     //await expect(browser).toHaveUrl("https://play1.automationcamp.ir/order_submit.html")
-    //     // await expect(browser).toHaveTitle('Order Pizza')
-    // })
+    it("Should login and verify login successfull", async () => {
+        const filePath = path.resolve('data', 'userList.json');
+        const rawdata = fs.readFileSync(filePath, 'utf-8');
+        const users = JSON.parse(rawdata);
+
+        console.log(users); // This will output the array of users
+
+        // await browser.url('https://play1.automationcamp.ir/login.html')
+        // await browser.pause(2000)
+        // const userName = await $('#user')
+        // await userName.setValue("admin")
+        // const password = await $('#password')
+        // await password.setValue("admin")
+        // const loginButton = await $('#login')
+        // await loginButton.click()
+        // //await expect(browser).toHaveUrl("https://play1.automationcamp.ir/order_submit.html")
+        // // await expect(browser).toHaveTitle('Order Pizza')
+    })
 
     // it("Should display the login button", async () => {
     //     await browser.url('https://play1.automationcamp.ir/expected_conditions.html')
