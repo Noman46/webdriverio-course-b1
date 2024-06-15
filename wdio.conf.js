@@ -1,4 +1,4 @@
-const env = process.env.npm_config_testSite  || 'default';
+const env = process.env.npm_config_testSite || 'default';
 
 
 
@@ -17,7 +17,8 @@ export const config = {
         // './test/specs/DropDown/test-drop-down.js'
         // './test/specs/**/letcodeLoginPage_test.js'
         //'./test/specs/**/test.assertion.js',
-         './test/specs/**/test.testdata.js'
+        //  './test/specs/**/test.testdata.js',
+        './test/specs/Mock/test.mock.prac.js'
 
     ],
 
@@ -42,8 +43,8 @@ export const config = {
     ],
 
     before: function (capabilities, specs) {
-        console.log(process.env.PATH);
-        console.log("===================", env)
+        // console.log(process.env.PATH);
+        // console.log("===================", env)
         browser.maximizeWindow();
     },
 
