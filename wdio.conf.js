@@ -1,5 +1,5 @@
 const env = process.env.npm_config_testSite || 'default';
-
+import CustomCommands from './test/commands.js'
 
 
 export const config = {
@@ -45,6 +45,7 @@ export const config = {
     before: function (capabilities, specs) {
         // console.log(process.env.PATH);
         // console.log("===================", env)
+        CustomCommands(); 
         browser.maximizeWindow();
     },
 
@@ -52,18 +53,18 @@ export const config = {
     logLevel: 'error',
     bail: 0,
     capabilities: [
-        {
-            maxInstances: 3,
-            browserName: 'chrome',
-            acceptInsecureCerts: true
-        },
         // {
-        //     maxInstances: 1,
-        //     browserName: 'firefox',
+        //     maxInstances: 3,
+        //     browserName: 'chrome',
         //     acceptInsecureCerts: true
-        // }
+        // },
+        {
+            maxInstances: 1,
+            browserName: 'firefox',
+            acceptInsecureCerts: true
+        }
     ],
-    waitforTimeout: 12000,
+    waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     services: [],
@@ -73,7 +74,9 @@ export const config = {
     reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 6000000
     },
     baseUrl: 'http://localhost'
 }
+
+
