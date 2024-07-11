@@ -68,23 +68,12 @@ export const config = {
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: false,
         }],
-        // [
-        //     SlackReporter,
-        //     {
-        //         slackOptions: {
-        //             type: 'web-api',
-        //             channel: 'C06RY8B282D',
-        //             slackBotToken: 'your bot token',
-        //         },
-        //         title: 'Slack Reporter Testdddd',
-        //     }
-
-        // ]
+       
     ],
  
     services: [
         // [slack, {
-        //     webHookUrl: "your webhook", // Used to post notification to a particular channel
+
         //     notifyOnlyOnFailure: false, // Send notification only on test failure
         //     messageTitle: ":heavy_check_mark: Snyk learning report from WebdriverIO :100: :tada:" // Name of the notification
         // }]
