@@ -74,7 +74,7 @@ export const config = {
         //         slackOptions: {
         //             type: 'web-api',
         //             channel: 'C06RY8B282D',
-        //             slackBotToken: 'xoxb-6868423296211-6869519567219-FPvNJlI0r6HN76rMOQga67on',
+        //             slackBotToken: 'your bot token',
         //         },
         //         title: 'Slack Reporter Testdddd',
         //     }
@@ -84,7 +84,7 @@ export const config = {
  
     services: [
         // [slack, {
-        //     webHookUrl: "https://hooks.slack.com/services/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", // Used to post notification to a particular channel
+        //     webHookUrl: "your webhook", // Used to post notification to a particular channel
         //     notifyOnlyOnFailure: false, // Send notification only on test failure
         //     messageTitle: ":heavy_check_mark: Snyk learning report from WebdriverIO :100: :tada:" // Name of the notification
         // }]
