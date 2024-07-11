@@ -9,11 +9,14 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js",
-    "me": "node test.js"
+    "test_login": "wdio ./wdio.conf.js --suite login",
+    "test_payment": "wdio wdio.conf.js --suite payment",
+    "test_payment_and_login": "wdio wdio.conf.js --suite payment --suite login",
+    "test_regression": "wdio wdio.conf.js --suite regr"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "geckodriver": "^4.4.1",
+    "xlsx": "^0.18.5"
   }
 }
-
-
-
-
-
