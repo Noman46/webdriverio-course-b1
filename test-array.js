@@ -29,15 +29,15 @@
 
 
 
-const users= [
-    { name: "Alice", age: 17 },
-    { name: "Bob", age: 1 },
-    { name: "Charlie", age: 1 },
-    { name: "David", age: 20 }
-];
+// const users= [
+//     { name: "Alice", age: 17 },
+//     { name: "Bob", age: 1 },
+//     { name: "Charlie", age: 1 },
+//     { name: "David", age: 20 }
+// ];
 
-const isAdult = users.some((user) => user.age > 18)
-console.log(isAdult)
+// const isAdult = users.some((user) => user.age > 18)
+// console.log(isAdult)
 
 // const employees = [
 //     { name: "Alice", salary: 95000 },
@@ -81,5 +81,14 @@ console.log(isAdult)
 //     })
 //     console.log(studentWithAverageScore)
 // }
+
+
+
+import * as faker from '@ngneat/falso';
+
+const randomName = faker.randAirportName()
+const randomEmail = faker.randEmail({ length: 4 })
+console.log("===============", randomEmail)
+
 
 

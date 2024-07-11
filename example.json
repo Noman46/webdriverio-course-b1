@@ -1,0 +1,44 @@
+{
+    "employee": {
+        "id": 12345,
+        "name": "John Doe",
+        "age": 30,
+        "address": {
+            "street": "123 Main St",
+            "city": "Anytown",
+            "state": "Anystate",
+            "zip": "12345"
+        },
+        "contact": {
+            "email": "johndoe@example.com",
+            "phone": "555-1234"
+        },
+        "position": {
+            "title": "Software Engineer",
+            "department": "Engineering",
+            "startDate": "2020-01-15"
+        },
+        "skills": [
+            "JavaScript",
+            "Node.js",
+            "React",
+            "SQL"
+        ],
+        "projects": [
+            {
+                "name": "Project Alpha",
+                "description": "A web application for managing tasks",
+                "startDate": "2021-03-01",
+                "endDate": "2021-09-30",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Project Beta",
+                "description": "A mobile app for tracking fitness activities",
+                "startDate": "2022-01-15",
+                "endDate": null,
+                "role": "Developer"
+            }
+        ]
+    }
+}

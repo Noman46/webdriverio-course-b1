@@ -1,0 +1,132 @@
+import DummyPage from '../../pageobjects/dummy.page.js'
+import { Key } from 'webdriverio'
+import { promises as fs } from 'fs';
+import * as faker from '@ngneat/falso';
+import { endianness } from 'os';
+describe('Cash-Cookies-Debug', () => {
+
+
+    // it.only('JSON ', async function ()  {
+    //     const jsonString = '{"name":"John", "age":30, "city":"New York"}'
+      
+    //     const parseObject = JSON.parse(jsonString)
+    //     console.log(typeof(parseObject))
+      
+    //     const stringiFy = JSON.stringify(parseObject)
+    //     console.log("The Stringify string  is = ", stringiFy)
+    //     console.log(typeof(stringiFy))
+    // })
+
+    // it.only('JSON read from file', async function ()  {
+
+    //     const employeeData =  await fs.readFile('employee.json','utf-8')
+    //     const employeeDataAfterParse = JSON.parse(employeeData)
+    //     console.log(employeeDataAfterParse.salary)
+
+    // })
+
+
+    // it.only('JSON write to file', async function ()  {
+
+    //     const employeeData =  await fs.readFile('employee.json','utf-8')
+    //     const employeeDataAfterParse = JSON.parse(employeeData)
+    //     // kono operation code, I goit the access key 
+    //     employeeDataAfterParse.acces_key = "exclsdfjlklkfjlasmdkjasbkdjasdbkajbsdkasjhdvjahsvdjasd"
+    //     const updateEmployeeData = JSON.stringify(employeeDataAfterParse)
+    //     await fs.writeFile('employee.json',updateEmployeeData)
+    // })
+
+    // it.only('HTTP Call Get all post and accessing data', async function () {
+    //     const getAllPOstURL = "https://jsonplaceholder.typicode.com/posts"
+                                  https://jsonplaceholder.typicode.com/posts
+    //     try{
+    //         const response = await fetch(getAllPOstURL)
+    //         const posts = await response.json()
+    //         console.log("response is ", posts[1].title)
+    //     }
+    //     catch (error) {
+    //         console.log(error)
+    //     }
+        
+    // })
+    // it.only('Get Single Post', async function () {
+    //     const singlePost = "https://jsonplaceholder.typicode.com/posts/1"
+    //     try{
+    //         const response = await fetch(singlePost)
+    //         const posts = await response.json()
+    //         console.log("response is ", posts)
+    //     }
+    //     catch (error) {
+    //         console.log(error)
+    //     }
+    // })
+    // it.only('Create a Post', async function () {
+    //     const createPostURL = "https://jsonplaceholder.typicode.com/posts"
+
+
+    //     const headers = new Headers();
+    //     headers.append("Content-Type", "application/json");
+      
+
+
+    //     const bodyData = {
+    //         id: 101,
+    //         title: 'This is a title',
+    //         postName: 'This is a post',
+    //         userId: 1
+    //       }
+
+
+    //     const postBody = {
+    //         method: "POST",
+    //         headers: headers,
+    //         body:JSON.stringify(bodyData)
+    //     }
+
+
+
+    //     try {
+    //         const response = await fetch(createPostURL,postBody)
+    //         const posts = await response.json()
+    //         console.log("response is ", posts)
+    //     }
+    //     catch (error) {
+    //         console.log(error)
+    //     }
+    // })
+
+
+
+    // it.only('should throw a custom error when 2 is not equal to 3', () => {
+    //     try {
+    //         if (2 === 2) {
+    //             console.log("Thi will log when passed");
+    //         } else {
+    //             throw new Error('======== 2 is not equal to 3');
+    //         }
+    //     } catch (error) {
+            
+    //         console.error('Custom Error========:', error.message);
+    //     }
+    //     finally {
+    //         console.log(" ============== I will print always")
+    //     }
+    // });
+
+
+    it.only('Faker message', async () => {
+        const randomAirportname = faker.randAirport()
+        const randomEmail = faker.randEmail({ length: 10 })
+        console.log("===============", randomEmail)
+        console.log("===============", randomEmail[2])
+    })
+
+});
+
+
+
+
+
+
+
+
