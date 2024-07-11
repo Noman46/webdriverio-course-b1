@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining Selectors Example</title>
+    <style>
+        .container {
+            margin: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        .item {
+            padding: 8px;
+            background-color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .highlight {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item highlight">Item 3 (Highlighted)</div>
+        <div class="item">Item 4</div>
+    </div>
+
+    <div class="dibba">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item highlight">Item 3 (Highlighted)</div>
+        <div class="item">Item 4</div>
+    </div>
+    $('.container .item:nth-child(2)')
+
+</body>
+</html>

@@ -44,6 +44,10 @@ class DragandDrop {
         await browser.pause(3000)
     }
 
+    async closePage () {
+        
+    }
+
 }
 
 export default new DragandDrop();
