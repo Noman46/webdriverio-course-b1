@@ -40,11 +40,9 @@ class LoginPageForPlayAutomation {
 
     async loginPlayAution (username,password) {
         await this.typeOnUserNameField(username)
-        await browser.pause(3000)
         await this.typeOnPasswordField(password)
-        await browser.pause(3000)
         await this.clickOnLoginButton()
-        await browser.pause(3000)
+
     }
 
 

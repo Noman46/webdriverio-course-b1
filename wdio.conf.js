@@ -11,33 +11,36 @@ export const config = {
     runner: 'local',
 
     specs: [
-        //'./test/specs/Mock/test.mock.prac.js'
-        './test/specs/test.report.practice.js'
+        //  './test/specs/**/test-locators.js'
+        // './test/specs/**/test-class-practise.js'
+        //  './test/specs/**/test-element-practice.js'
+        // './test/specs/**/test-class-4-element-practice.js'
+        './test/specs/**/test-login-playauto.js',
+        // './test/specs/DragAndDrop/test-drag-and-drop.js',
+        //'./test/specs/Frames/test.iframe.js'
+        // './test/specs/DropDown/test-drop-down.js'
+
+    ],
+    
+
+    exclude: [
+        // 'path/to/excluded/files'
     ],
 
-    suites: {
-        login: [
-            './test/specs/Login/test-login.js',
-            './test/specs/Login/test-loginfrom-article.js',
-
-        ],
-        payment: [
-            './test/specs/Payment/payment-1.js',
-        ],
-        regression: [
-            './test/specs/Login/test-login.js',
-            './test/specs/Login/test-loginfrom-article.js',
-            './test/specs/Payment/payment-1.js',
-        ]
+    before: function (capabilities, specs) {
+        browser.maximizeWindow();
     },
 
-    mochaOpts: {
-        ui: 'bdd',
-        timeout: 6000000,
-        retries: 2,
-    },
-
-    waitforTimeout: 10000,
+    maxInstances: 10,
+    logLevel: 'error',
+    bail: 0,
+    capabilities: [{
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: ['headless', 'disable-gpu']
+        }
+    }],
+    waitforTimeout: 40000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
 
