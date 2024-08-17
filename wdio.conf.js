@@ -31,8 +31,8 @@ export const config = {
         browser.maximizeWindow();
     },
 
-    maxInstances: 10,
-    logLevel: 'error',
+    maxInstances: 1,
+    logLevel: 'debug',
     bail: 0,
     capabilities: [{
         browserName: 'chrome',
