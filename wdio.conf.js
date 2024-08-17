@@ -39,12 +39,8 @@ export const config = {
         'goog:chromeOptions': {
             args: [
                 '--headless',
-                '--no-sandbox',
                 '--disable-dev-shm-usage',
-                '--disable-gpu',
-                '--window-size=1920,1080',
-                '--disable-setuid-sandbox',
-                '--disable-dev-shm-usage',
+                '--disable-gpu'
             ]
         }
     }],
@@ -57,22 +53,22 @@ export const config = {
 
     logLevel: 'error',
     bail: 0,
-    capabilities: [
-        {
-            maxInstances: 1,
-            browserName: 'chrome',
-            // acceptInsecureCerts: true,
-            // 'goog:chromeOptions': {
-            //     args: ['headless', 'disable-gpu']
-            // }
+    // capabilities: [
+    //     {
+    //         maxInstances: 1,
+    //         browserName: 'chrome',
+    //         // acceptInsecureCerts: true,
+    //         // 'goog:chromeOptions': {
+    //         //     args: ['headless', 'disable-gpu']
+    //         // }
 
-        },
-        // {
-        //     maxInstances: 1,
-        //     browserName: 'firefox',
-        //     acceptInsecureCerts: true
-        // }
-    ],
+    //     },
+    //     // {
+    //     //     maxInstances: 1,
+    //     //     browserName: 'firefox',
+    //     //     acceptInsecureCerts: true
+    //     // }
+    // ],
     reporters: ['spec',
         ['allure', {
             outputDir: 'allure-results',
