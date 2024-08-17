@@ -13,13 +13,6 @@ jobs:
           run: npm install
         - name: Test
           run: npm run wdio
-        - name: Get Allure history # Step to retrieve Allure history
-          uses: actions/checkout@v3
-          if: always() # Execute even if previous steps fail
-          continue-on-error: true # Continue execution even if the step fails
-          with:
-            ref: gh-pages # Specify the branch to retrieve Allure history from
-            path: gh-pages # Set the destination path for Allure history
         - name: Allure report action # Step to generate Allure report
           uses: simple-elf/allure-report-action@master
           if: always() # Execute even if previous steps fail
@@ -27,19 +20,9 @@ jobs:
             allure_results: allure-results # Specify the directory containing Allure results
             allure_history: allure-history # Specify the directory to store Allure history
             keep_reports: 2 # Specify the number of previous reports to keep
-        - name: Deploy report to Github Pages
-          if: always()
-          uses: peaceiris/actions-gh-pages@v2
-          env:    
-            PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            PUBLISH_BRANCH: gh-pages
-            PUBLISH_DIR: allure-history
-        - name: Post the link to the report
-          if: always()
-          uses: Sibz/github-status-action@v1
-          with: 
-              authToken: ${{secrets.GITHUB_TOKEN}}
-              context: 'Test report'
-              state: 'success'
-              sha: ${{ github.event.pull_request.head.sha }}
-              target_url: simple-elf.github.io/github-allure-history/${{ github.run_number }}
+        - name: Take Report
+          uses: actions/upload-artifact@v3
+          with:
+            name: allureReport
+            path: ./allure-report
+        
