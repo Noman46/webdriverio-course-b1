@@ -1,3 +1,4 @@
 node_modules/
 dist/
 allure-results/
+allure-report/
