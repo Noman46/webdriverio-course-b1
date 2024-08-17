@@ -1,24 +1,11 @@
-const env = process.env.npm_config_testSite || 'default';
-import CustomCommands from './test/commands.js'
-import fs from 'fs';
-import path from 'path';
-import slack from 'wdio-slack-service';
-import SlackReporter from '@moroo/wdio-slack-reporter';
-
-
 
 export const config = {
     runner: 'local',
 
     specs: [
-        //  './test/specs/**/test-locators.js'
-        // './test/specs/**/test-class-practise.js'
-        //  './test/specs/**/test-element-practice.js'
-        // './test/specs/**/test-class-4-element-practice.js'
+     
         './test/specs/**/test-login-playauto.js',
-        // './test/specs/DragAndDrop/test-drag-and-drop.js',
-        //'./test/specs/Frames/test.iframe.js'
-        // './test/specs/DropDown/test-drop-down.js'
+
 
     ],
 
@@ -44,11 +31,11 @@ export const config = {
             ]
         }
     }],
-    waitforTimeout: 40000,
-    connectionRetryTimeout: 120000,
+    waitforTimeout: 10000,
+    connectionRetryTimeout: 12000,
     connectionRetryCount: 3,
 
-    baseUrl: 'http://localhost',
+    baseUrl: '',
     framework: 'mocha',
 
     logLevel: 'error',
@@ -96,33 +83,32 @@ export const config = {
         //     messageTitle: ":heavy_check_mark: Snyk learning report from WebdriverIO :100: :tada:" // Name of the notification
         // }]
     ],
-    before: function (capabilities, specs) {
-        // console.log(process.env.PATH);
-        // console.log("===================", env)
-        CustomCommands();
-        browser.maximizeWindow();
-        const allureReportPath = path.join(process.cwd(), 'allure-report');
-        if (fs.existsSync(allureReportPath)) {
-            fs.rmdirSync(allureReportPath, { recursive: true });
-        } else {
-            console.log('Folder allure report does not exist');
-        }
-        const allureResultPath = path.join(process.cwd(), 'allure-results');
-        if (fs.existsSync(allureResultPath)) {
-            fs.rmdirSync(allureResultPath, { recursive: true });
-        } else {
-            console.log('Folder allure result does not exist');
-        }
-    },
+    // before: function (capabilities, specs) {
+    
+    //     CustomCommands();
+    //     browser.maximizeWindow();
+        // const allureReportPath = path.join(process.cwd(), 'allure-report');
+        // if (fs.existsSync(allureReportPath)) {
+        //     fs.rmdirSync(allureReportPath, { recursive: true });
+        // } else {
+        //     console.log('Folder allure report does not exist');
+        // }
+        // const allureResultPath = path.join(process.cwd(), 'allure-results');
+        // if (fs.existsSync(allureResultPath)) {
+        //     fs.rmdirSync(allureResultPath, { recursive: true });
+        // } else {
+        //     console.log('Folder allure result does not exist');
+        // }
+    //},
 
-    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
-        if (error) {
-            // Take screenshot
-            const screenshot = await browser.takeScreenshot();
-            // Attach screenshot to Allure report
-            allure.addAttachment('Screenshot on Failure', Buffer.from(screenshot, 'base64'), 'image/png');
-        }
-    },
+    // afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+    //     if (error) {
+    //         // Take screenshot
+    //         const screenshot = await browser.takeScreenshot();
+    //         // Attach screenshot to Allure report
+    //         allure.addAttachment('Screenshot on Failure', Buffer.from(screenshot, 'base64'), 'image/png');
+    //     }
+    // },
     beforeSuite: function () {
         let a = 30
         let b = 30
