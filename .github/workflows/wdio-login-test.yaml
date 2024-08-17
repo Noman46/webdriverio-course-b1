@@ -1,14 +1,12 @@
-name: CI
+name: wdio-login-test
 on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
         - name: Checkout
-          uses: actions/checkout@v2
-        - name: Install Chromium
-          run: sudo apt-get install chromium-browser
-        - uses: actions/setup-node@v1
+          uses: actions/checkout@v4
+        - uses: actions/setup-node@v3
           with:
             node-version: 18
         - name: Install
@@ -16,7 +14,6 @@ jobs:
         - name: Test
           run: npm run wdio
         - uses: actions/upload-artifact@v1
-          if: failure()
           with:
             name: logs
             path: logs
