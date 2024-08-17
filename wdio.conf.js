@@ -21,7 +21,7 @@ export const config = {
         // './test/specs/DropDown/test-drop-down.js'
 
     ],
-    
+
 
     exclude: [
         // 'path/to/excluded/files'
@@ -37,7 +37,15 @@ export const config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: ['headless', 'disable-gpu']
+            args: [
+                '--headless',
+                '--no-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-gpu',
+                '--window-size=1920,1080',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+            ]
         }
     }],
     waitforTimeout: 40000,
@@ -84,7 +92,7 @@ export const config = {
 
         // ]
     ],
- 
+
     services: [
         // [slack, {
         //     webHookUrl: "your web hook url", // Used to post notification to a particular channel
