@@ -1,0 +1,13 @@
+name: Daily 6 AM Workflow
+
+on:
+  schedule:
+    - cron: '*/10 * * * *' # Runs every day at 6 AM UTC
+
+jobs:
+  run-daily:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message
+        run: echo "This job runs every day at 6 AM UTC."
