@@ -1,13 +1,19 @@
-name: Notify Slack
+name: slack-notification
 
 on:
   workflow_dispatch:
 
 jobs:
-  notify-slack:
+  slack-notifications:
     runs-on: ubuntu-latest
-
+    name: Sends a message to Slack when a push, a pull request or an issue is made
     steps:
-      - name: Send notification to Slack
-        run: |
-            curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
+      - name: Send message to Slack API
+        uses: archive/github-actions-slack@v2.0.0
+        id: notify
+        with:
+          slack-bot-user-oauth-access-token: xoxb-6868423296211-6869519567219-fbaqpnCWd3bnwAtgriyj3WNn
+          slack-channel: C06RFJ12F3P
+          slack-text: Hello! This is me from slack
+      - name: Result from "Send Message"
+        run: echo "The result was ${{ steps.notify.outputs.slack-result }}"
